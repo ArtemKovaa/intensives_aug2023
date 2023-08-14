@@ -1,6 +1,9 @@
 package ru.yandex;
 
 import ru.yandex.tasks.Task1BubbleSort;
+import ru.yandex.tasks.Task2SelectionSort;
+import ru.yandex.tasks.Task3InsertionSort;
+import ru.yandex.tasks.Task4DFS;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,6 +11,8 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         Task1BubbleSort.selfCheck();
-        System.out.println(Task1BubbleSort.sort(new ArrayList<>(Arrays.asList(3, 4, 5, 2, 1))));
+        Task2SelectionSort.selfCheck();
+        Task3InsertionSort.selfCheck();
+        Task4DFS.selfCheck();
     }
 }
