@@ -9,8 +9,20 @@ public class Task1BubbleSort {
          * numbers: массив целых чисел, -10^5 <= numbers[i] <= 10^5, длина массива до 10^5
          * Выход: отсортированный (сортировкой пузырьком!) numbers
          */
-        // (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ WRITE CODE HERE (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
-        return null;
+        for (int i = numbers.size() - 1; i >= 0; i--) {
+            boolean isSwapped = false;
+            for (int j = 0; j < i; j++) {
+                if (numbers.get(j) > numbers.get(j + 1)) {
+                    int temp = numbers.get(j + 1);
+                    numbers.set(j + 1, numbers.get(j));
+                    numbers.set(j, temp);
+                    isSwapped = true;
+                }
+            }
+            if (!isSwapped) break;
+
+        }
+        return numbers;
     }
 
     public static void selfCheck() {
