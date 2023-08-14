@@ -15,5 +15,6 @@ public class Main {
         Task6BraceBalance.selfCheck();
         Task7PrimeNumbers.selfCheck();
         Task8BinarySearch.selfCheck();
+        Task9ReverseList.selfCheck();
     }
 }

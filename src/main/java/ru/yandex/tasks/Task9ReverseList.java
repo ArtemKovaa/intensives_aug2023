@@ -7,8 +7,14 @@ public class Task9ReverseList {
          * head - голова списка
          * Выход: новая голова списка
          */
-        // (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ WRITE CODE HERE (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
-        return null;
+        Node slow = null;
+        while (head != null) {
+            var temp = head;
+            head = head.next;
+            temp.next = slow;
+            slow = temp;
+        }
+        return slow;
     }
 
     public static void selfCheck() {
