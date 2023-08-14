@@ -9,8 +9,16 @@ public class Task3InsertionSort {
          * numbers: массив целых чисел, -10^5 <= numbers[i] <= 10^5, длина массива до 10^5
          * Выход: отсортированный (сортировкой вставками!) numbers
          */
-        // (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ WRITE CODE HERE (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
-        return null;
+        for (int i = 0; i < numbers.size(); i++) {
+            for (int j = i; j > 0; j--) {
+                if (numbers.get(j) < numbers.get(j - 1)) {
+                    int temp = numbers.get(j);
+                    numbers.set(j, numbers.get(j - 1));
+                    numbers.set(j - 1, temp);
+                }
+            }
+        }
+        return numbers;
     }
 
     public static void selfCheck() {
